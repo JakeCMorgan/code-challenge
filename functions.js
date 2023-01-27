@@ -96,7 +96,7 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    return arr.map((ar) => ({ name: ar.name.toUpperCase(), type: ar.type }));
 }
 
 /*
@@ -106,7 +106,7 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    return arr.map((ar) => ar.name + ar.type);
 }
 
 /*
@@ -118,9 +118,7 @@ OUTPUT:
 { name: 'jumpy', type: 'frog' }
 */
 
-export function findByName(name, arr) {
-    return {};
-}
+export function findByName(name, arr) {}
 
 /*
 Output:

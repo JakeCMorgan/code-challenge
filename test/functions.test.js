@@ -93,7 +93,7 @@ test('should return all objects with an added isHungry property equal to true', 
     expect.deepEqual(actual, expected);
 });
 
-skip('should return a shouting array', (expect) => {
+test('should return a shouting array', (expect) => {
     const expected = [
         { name: 'SCOOTER', type: 'dog' },
         { name: 'SASSY', type: 'dog' },
@@ -105,7 +105,7 @@ skip('should return a shouting array', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('should return a proper array of strings', (expect) => {
+test('should return a proper array of strings', (expect) => {
     const expected = ['scooterdog', 'sassydog', 'legzofrog', 'fluffsquirrel'];
     const actual = makeStringArray([...otherPets]);
 
