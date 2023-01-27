@@ -18,7 +18,8 @@ OUTPUT:
 ]*/
 
 export function getDogs(arr) {
-    return [];
+    const dogs = arr.filter((otherPets) => otherPets.type === 'dog');
+    return dogs;
 }
 
 /*
@@ -28,7 +29,8 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+    const names = arr.map((otherPets) => otherPets.name);
+    return names;
 }
 
 /*
@@ -37,7 +39,9 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    return [];
+    const names = arr.filter((otherPets) => otherPets.type === 'dog');
+    const filteredNames = names.map((names) => names.name);
+    return filteredNames;
 }
 
 /*
@@ -47,7 +51,9 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    const types = arr.map((pets) => pets.type);
+    const reverseTypes = types.reverse();
+    return reverseTypes;
 }
 
 /*
@@ -62,7 +68,7 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    return [];
+    return arr.map((ar) => ({ nombre: ar.name, tipo: ar.type }));
 }
 
 /*
@@ -76,7 +82,7 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-     return []
+    return arr.map((ar) => ({ name: ar.name, isHungry: true, type: ar.type }));
 }
 
 /*
@@ -90,9 +96,8 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    return arr.map((ar) => ({ name: ar.name.toUpperCase(), type: ar.type }));
 }
-
 
 /*
 
@@ -101,7 +106,7 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    return arr.map((ar) => ar.name + ar.type);
 }
 
 /*
@@ -114,9 +119,8 @@ OUTPUT:
 */
 
 export function findByName(name, arr) {
-    return {};
+    return arr.find((pet) => name === pet.name);
 }
-
 /*
 Output:
 
@@ -140,7 +144,10 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    return arr.map((ar) => [
+        ['name', ar.name],
+        ['type', ar.type],
+    ]);
 }
 
 ////////////////////////////////////////////////////////
@@ -226,14 +233,12 @@ export function makeCountObject(arr) {
     return {};
 }
 
-
 /*
 
 Output: 
 (order doesn't matter--but the string must include all keys for the first object in the array)
 'typemakemodelage'
  */
-
 
 export function makeKeysString(arr) {
     return '';
