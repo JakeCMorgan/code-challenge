@@ -118,8 +118,9 @@ OUTPUT:
 { name: 'jumpy', type: 'frog' }
 */
 
-export function findByName(name, arr) {}
-
+export function findByName(name, arr) {
+    return arr.find((pet) => name === pet.name);
+}
 /*
 Output:
 
@@ -143,7 +144,10 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    return arr.map((ar) => [
+        ['name', ar.name],
+        ['type', ar.type],
+    ]);
 }
 
 ////////////////////////////////////////////////////////
